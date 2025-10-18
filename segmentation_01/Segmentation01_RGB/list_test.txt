@@ -1,0 +1,10 @@
+.\test\org\0.png,.\test\label\0.png
+.\test\org\1.png,.\test\label\1.png
+.\test\org\2.png,.\test\label\2.png
+.\test\org\3.png,.\test\label\3.png
+.\test\org\4.png,.\test\label\4.png
+.\test\org\5.png,.\test\label\5.png
+.\test\org\6.png,.\test\label\6.png
+.\test\org\7.png,.\test\label\7.png
+.\test\org\8.png,.\test\label\8.png
+.\test\org\9.png,.\test\label\9.png
