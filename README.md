@@ -24,10 +24,7 @@ The goal is to demonstrate and compare modern deep learning pipelines with tradi
 ├── localization/            # Localization models and evaluation scripts
 ├── segmentation/            # U-Net-based segmentation training and testing
 ├── classical_methods/       # Classical techniques (Otsu, Active Contour/Snake, etc.)
-├── data/                    # Mini JSRT dataset (images and masks)
-├── models_unet.py           # U-Net architecture
-├── models_resnet.py         # ResNet classifier definition
-├── train_test_*.py          # Task-specific training/testing scripts
+├── data/                    # Mini JSRT dataset (images and mask
 └── utils/                   # Helper functions (metrics, loaders, visualization)
 ```
 ---
