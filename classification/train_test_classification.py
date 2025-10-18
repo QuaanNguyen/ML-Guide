@@ -4,7 +4,7 @@ import torch.nn as nn
 import torch.optim as optim
 from tqdm import trange, tqdm
 from utils.loader_classification import make_loaders
-from models import ResNet18
+from .models import ResNet18
 
 
 # ----------------- train & test funcs -----------------
@@ -54,7 +54,7 @@ def main(train_list, test_list, epochs, batch_size):
         train_list, test_list, batch_size=batch_size
     )
 
-    model = ResNet18(num_classes=num_classes, in_channels=1).to(device)
+    model = ResNet18(num_classes=num_classes, in_channels=3).to(device)
     criterion = nn.CrossEntropyLoss()
     optimizer = optim.Adam(model.parameters(), lr=0.001)
 
@@ -70,10 +70,10 @@ def main(train_list, test_list, epochs, batch_size):
 
 if __name__ == "__main__":
     parser = argparse.ArgumentParser("Train/Test ResNet18 (grayscale)")
-    parser.add_argument("--train_list", default="Directions01/list_train.txt")
-    parser.add_argument("--test_list", default="Directions01/list_test.txt")
+    parser.add_argument("--train_list", default="./data/Directions01/list_train.txt")
+    parser.add_argument("--test_list", default="./data/Directions01/list_test.txt")
     parser.add_argument("--epochs", type=int, default=10)
-    parser.add_argument("--batch_size", type=int, default=128)
+    parser.add_argument("--batch_size", type=int, default=32)
     args = parser.parse_args()
 
     main(args.train_list, args.test_list, args.epochs, args.batch_size)

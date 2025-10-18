@@ -6,7 +6,7 @@ import numpy as np
 from tqdm import trange
 
 from utils.loader_segmentation import make_segmentation_loaders 
-from models_unet import UNet 
+from .models_unet import UNet 
 
 
 # ---- Soft Dice (no threshold) as a metric ----
@@ -106,7 +106,7 @@ def main(root_dir, epochs, batch_size, img_size):
 
 if __name__ == "__main__":
     parser = argparse.ArgumentParser("Train/Test U-Net for Segmentation01 (RGB)")
-    parser.add_argument("--data_root", default="Segmentation01_RGB")
+    parser.add_argument("--data_root", default="./data/Segmentation01_RGB")
     parser.add_argument("--epochs", type=int, default=100)
     parser.add_argument("--batch_size", type=int, default=4) 
     parser.add_argument("--img_size", type=int, default=256) 
